@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda | A.N.G.E.R IMPORTS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ajuda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-info">
+                    <span><i class="fas fa-phone"></i> (11) 9999-9999</span>
+                    <span><i class="fas fa-envelope"></i> contato@angerimports.com.br</span>
+                </div>
+                <div class="top-actions">
+                    <a href="login.html"><i class="fas fa-user"></i> Entrar</a>
+                    <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 100 100" class="spiky-ball">
+                            <circle cx="50" cy="50" r="35" fill="#1a1a2e"/>
+                            <g class="spikes">
+                                <polygon points="50,5 45,25 55,25" fill="#1a1a2e"/>
+                                <polygon points="50,95 45,75 55,75" fill="#1a1a2e"/>
+                                <polygon points="5,50 25,45 25,55" fill="#1a1a2e"/>
+                                <polygon points="95,50 75,45 75,55" fill="#1a1a2e"/>
+                                <polygon points="15,15 30,28 22,32" fill="#1a1a2e"/>
+                                <polygon points="85,85 70,72 78,68" fill="#1a1a2e"/>
+                                <polygon points="85,15 70,28 78,32" fill="#1a1a2e"/>
+                                <polygon points="15,85 30,72 22,68" fill="#1a1a2e"/>
+                            </g>
+                            <circle cx="50" cy="50" r="28" fill="#0f3460"/>
+                            <circle cx="50" cy="50" r="20" fill="#1a1a2e"/>
+                            <circle cx="42" cy="42" r="5" fill="#fff" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">ANGER</span>
+                        <span class="logo-sub">imports</span>
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="index.html#promocoes">Promoções</a></li>
+                    <li><a href="ajuda.html" class="active">Ajuda</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="help-page">
+        <section class="help-hero">
+            <div class="container">
+                <h1>Central de <span>Ajuda</span></h1>
+                <p>Como podemos ajudar você hoje?</p>
+                <div class="help-search">
+                    <input type="text" placeholder="Buscar ajuda..." id="helpSearch">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-categories">
+            <div class="container">
+                <div class="categories-grid">
+                    <div class="category-card" onclick="scrollToSection('faq')">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Perguntas Frequentes</h3>
+                        <p>Tire suas dúvidas mais comuns</p>
+                    </div>
+                    <div class="category-card" onclick="scrollToSection('financing')">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Financiamento</h3>
+                        <p>Condições e simulador</p>
+                    </div>
+                    <div class="category-card" onclick="scrollToSection('delivery')">
+                        <i class="fas fa-truck"></i>
+                        <h3>Entrega</h3>
+                        <p>Como funciona a entrega</p>
+                    </div>
+                    <div class="category-card" onclick="scrollToSection('warranty')">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Garantia</h3>
+                        <p>Saiba sobre nossa garantia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2><i class="fas fa-question-circle"></i> Perguntas Frequentes</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Como funciona o processo de compra?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O processo de compra é simples e transparente:</p>
+                            <ol>
+                                <li>Escolha o veículo desejado em nosso catálogo</li>
+                                <li>Entre em contato ou agende uma visita</li>
+                                <li>Faça uma inspeção detalhada e test drive</li>
+                                <li>Escolha a forma de pagamento (à vista, financiamento ou consórcio)</li>
+                                <li>Documentação e transferência por nossa conta</li>
+                                <li>Receba seu novo carro!</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Quais documentos preciso para comprar um carro?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Para realizar a compra, você precisará de:</p>
+                            <ul>
+                                <li>CPF e RG originais</li>
+                                <li>Comprovante de residência atualizado (últimos 3 meses)</li>
+                                <li>CNH (Carteira Nacional de Habilitação)</li>
+                                <li>Comprovante de renda (se for financiar)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Vocês aceitam carro usado como parte do pagamento?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim! Aceitamos seu usado ou seminovo como entrada. Nossa equipe especializada faz a avaliação do seu veículo no momento da visita, considerando:</p>
+                            <ul>
+                                <li>Estado de conservação</li>
+                                <li>Quilometragem</li>
+                                <li>Histórico de manutenção</li>
+                                <li>Documentação em dia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Como funciona a garantia dos veículos?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Todos os nossos veículos contam com garantia:</p>
+                            <ul>
+                                <li>Veículos 0km: Garantia de fábrica (geralmente 3 a 5 anos)</li>
+                                <li>Seminovos: Garantia de 3 a 12 meses, dependendo do veículo</li>
+                                <li>Cobertura para motor, câmbio e componentes principais</li>
+                                <li>Rede autorizada para assistência técnica</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>É possível agendar um test drive?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Claro! Você pode agendar seu test drive de forma simples:</p>
+                            <ul>
+                                <li>Clique em "Agendar Test Drive" no veículo desejado</li>
+                                <li>Ou acesse nossa página de agendamento</li>
+                                <li>Preencha seus dados e escolha a concessionária</li>
+                                <li>Aguardamos você no dia e horário marcados!</li>
+                            </ul>
+                            <a href="registro-testdrive.html" class="btn-link">Agendar Test Drive</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Quais formas de pagamento são aceitas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oferecemos diversas opções de pagamento:</p>
+                            <ul>
+                                <li>À vista (transferência, PIX ou cheque)</li>
+                                <li>Financiamento bancário em até 60x</li>
+                                <li>Consórcio</li>
+                                <li>Cartão de crédito (entrada)</li>
+                                <li>Permuta de veículo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" id="financing">
+            <div class="container">
+                <h2><i class="fas fa-hand-holding-usd"></i> Financiamento</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-percentage"></i>
+                        <h3>Taxas Competitivas</h3>
+                        <p>Trabalhamos com os principais bancos para oferecer as melhores taxas do mercado.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Parcelas Flexíveis</h3>
+                        <p>Escolha o número de parcelas que cabe no seu bolso, de 12 até 60 meses.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Aprovação Rápida</h3>
+                        <p>Análise de crédito em até 24 horas com resposta ágil.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h3>Entrada Mínima</h3>
+                        <p>Financie até 90% do valor do veículo, com entrada a partir de 10%.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" id="delivery">
+            <div class="container">
+                <h2><i class="fas fa-truck"></i> Entrega</h2>
+                <div class="delivery-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Confirmação</h3>
+                        <p>Após a aprovação do pagamento, confirmamos todos os dados para entrega.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Preparação</h3>
+                        <p>Veículo passa por revisão final, higienização e preparação documental.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Entrega</h3>
+                        <p>Entregamos em todo o Brasil, com rastreamento e seguro durante o transporte.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Recebimento</h3>
+                        <p>Você recebe o veículo com toda documentação regularizada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" id="warranty">
+            <div class="container">
+                <h2><i class="fas fa-shield-alt"></i> Garantia</h2>
+                <div class="warranty-content">
+                    <div class="warranty-info">
+                        <div class="warranty-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Garantia Estendida</h4>
+                                <p>Opção de estender a garantia por mais 12 ou 24 meses.</p>
+                            </div>
+                        </div>
+                        <div class="warranty-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Assistência 24h</h4>
+                                <p>Guincho e socorro mecânico em todo território nacional.</p>
+                            </div>
+                        </div>
+                        <div class="warranty-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Carro Reserva</h4>
+                                <p>Veículo reserva durante período de garantia em casos específicos.</p>
+                            </div>
+                        </div>
+                        <div class="warranty-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Rede Autorizada</h4>
+                                <p>Revisões e reparos nas melhores oficinas autorizadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-support">
+            <div class="container">
+                <h2>Ainda precisa de ajuda?</h2>
+                <p>Entre em contato com nossa equipe de suporte</p>
+                <div class="support-options">
+                    <a href="tel:+551199999999" class="support-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Ligar Agora</span>
+                    </a>
+                    <a href="https://wa.me/5511999999999" class="support-card whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:contato@angerimports.com.br" class="support-card">
+                        <i class="fas fa-envelope"></i>
+                        <span>E-mail</span>
+                    </a>
+                </div>
+                
+                <div class="contact-form-section">
+                    <h3>Envie sua mensagem</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Nome completo</label>
+                                <input type="text" id="contactName" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">E-mail</label>
+                                <input type="email" id="contactEmail" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Assunto</label>
+                            <select id="contactSubject" required>
+                                <option value="">Selecione</option>
+                                <option value="vendas">Vendas</option>
+                                <option value="financiamento">Financiamento</option>
+                                <option value="garantia">Garantia</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Mensagem</label>
+                            <textarea id="contactMessage" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 100 100" class="spiky-ball">
+                                <circle cx="50" cy="50" r="35" fill="#1a1a2e"/>
+                                <g class="spikes">
+                                    <polygon points="50,5 45,25 55,25" fill="#1a1a2e"/>
+                                    <polygon points="50,95 45,75 55,75" fill="#1a1a2e"/>
+                                    <polygon points="5,50 25,45 25,55" fill="#1a1a2e"/>
+                                    <polygon points="95,50 75,45 75,55" fill="#1a1a2e"/>
+                                </g>
+                                <circle cx="50" cy="50" r="28" fill="#0f3460"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">ANGER</span>
+                            <span class="logo-sub">imports</span>
+                        </div>
+                    </a>
+                    <p>Sua concessionária de carros importados com os melhores preços e condições do mercado.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="index.html#promocoes">Promoções</a></li>
+                        <li><a href="ajuda.html">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">Financiamento</a></li>
+                        <li><a href="registro-testdrive.html">Test Drive</a></li>
+                        <li><a href="#">Revisões</a></li>
+                        <li><a href="#">Garantia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@angerimports.com.br</p>
+                    <p><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 9h-14h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 A.N.G.E.R IMPORTS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const icon = button.querySelector('i');
+            
+            item.classList.toggle('active');
+            
+            if (item.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                answer.style.maxHeight = '0';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                showNotification('Mensagem enviada com sucesso!', 'success');
+                this.reset();
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
+                btn.disabled = false;
+            }, 1500);
+        });
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.innerHTML = '<i class="fas fa-' + (type === 'success' ? 'check-circle' : 'info-circle') + '"></i> ' + message;
+            notification.style.cssText = 'position: fixed; top: 100px; right: 20px; background: #10b981; color: white; padding: 15px 25px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; gap: 10px;';
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 3000);
+        }
+    </script>
+</body>
+</html>

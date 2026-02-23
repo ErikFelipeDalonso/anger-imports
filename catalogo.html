@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | A.N.G.E.R IMPORTS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-info">
+                    <span><i class="fas fa-phone"></i> (11) 9999-9999</span>
+                    <span><i class="fas fa-envelope"></i> contato@angerimports.com.br</span>
+                </div>
+                <div class="top-actions">
+                    <a href="login.html"><i class="fas fa-user"></i> Entrar</a>
+                    <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 100 100" class="spiky-ball">
+                            <circle cx="50" cy="50" r="35" fill="#1a1a2e"/>
+                            <g class="spikes">
+                                <polygon points="50,5 45,25 55,25" fill="#1a1a2e"/>
+                                <polygon points="50,95 45,75 55,75" fill="#1a1a2e"/>
+                                <polygon points="5,50 25,45 25,55" fill="#1a1a2e"/>
+                                <polygon points="95,50 75,45 75,55" fill="#1a1a2e"/>
+                                <polygon points="15,15 30,28 22,32" fill="#1a1a2e"/>
+                                <polygon points="85,85 70,72 78,68" fill="#1a1a2e"/>
+                                <polygon points="85,15 70,28 78,32" fill="#1a1a2e"/>
+                                <polygon points="15,85 30,72 22,68" fill="#1a1a2e"/>
+                            </g>
+                            <circle cx="50" cy="50" r="28" fill="#0f3460"/>
+                            <circle cx="50" cy="50" r="20" fill="#1a1a2e"/>
+                            <circle cx="42" cy="42" r="5" fill="#fff" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">ANGER</span>
+                        <span class="logo-sub">imports</span>
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                    <li><a href="index.html#promocoes">Promoções</a></li>
+                    <li><a href="ajuda.html">Ajuda</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="catalog-page">
+        <section class="catalog-hero">
+            <div class="container">
+                <h1>Nosso <span>Catálogo</span></h1>
+                <p>Encontre o carro perfeito para você</p>
+            </div>
+        </section>
+
+        <div class="catalog-container">
+            <aside class="filters-sidebar" id="filtersSidebar">
+                <div class="filters-header">
+                    <h3><i class="fas fa-filter"></i> Filtros</h3>
+                    <button class="btn-clear-filters" onclick="clearFilters()">Limpar</button>
+                </div>
+                
+                <form id="filterForm" class="filter-form">
+                    <div class="filter-group">
+                        <label>Marca</label>
+                        <select name="brand" id="filterBrand">
+                            <option value="">Todas</option>
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes-Benz</option>
+                            <option value="audi">Audi</option>
+                            <option value="porsche">Porsche</option>
+                            <option value="landrover">Land Rover</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="jaguar">Jaguar</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Modelo</label>
+                        <select name="model" id="filterModel">
+                            <option value="">Todos</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Ano</label>
+                        <div class="range-inputs">
+                            <select name="minYear" id="minYear">
+                                <option value="">Mín</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                            </select>
+                            <span>até</span>
+                            <select name="maxYear" id="maxYear">
+                                <option value="">Máx</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Preço</label>
+                        <div class="range-inputs">
+                            <select name="minPrice" id="minPrice">
+                                <option value="">Mín</option>
+                                <option value="100000">R$ 100.000</option>
+                                <option value="200000">R$ 200.000</option>
+                                <option value="300000">R$ 300.000</option>
+                                <option value="500000">R$ 500.000</option>
+                            </select>
+                            <span>até</span>
+                            <select name="maxPrice" id="maxPrice">
+                                <option value="">Máx</option>
+                                <option value="200000">R$ 200.000</option>
+                                <option value="300000">R$ 300.000</option>
+                                <option value="500000">R$ 500.000</option>
+                                <option value="1000000">R$ 1.000.000</option>
+                                <option value="9999999">Acima de R$ 1M</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Combustível</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="fuel" value="gasolina">
+                                <span class="checkmark"></span>
+                                Gasolina
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="fuel" value="flex">
+                                <span class="checkmark"></span>
+                                Flex
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="fuel" value="hibrido">
+                                <span class="checkmark"></span>
+                                Híbrido
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="fuel" value="eletrico">
+                                <span class="checkmark"></span>
+                                Elétrico
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Câmbio</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="transmission" value="automatico">
+                                <span class="checkmark"></span>
+                                Automático
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="transmission" value="manual">
+                                <span class="checkmark"></span>
+                                Manual
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-apply-filters" onclick="applyFilters()">
+                        <i class="fas fa-search"></i> Aplicar Filtros
+                    </button>
+                </form>
+            </aside>
+
+            <section class="catalog-content">
+                <div class="catalog-toolbar">
+                    <button class="btn-toggle-filters" id="toggleFilters">
+                        <i class="fas fa-filter"></i> Filtros
+                    </button>
+                    <div class="results-info">
+                        <span id="resultsCount">12 veículos encontrados</span>
+                    </div>
+                    <div class="sort-options">
+                        <label>Ordenar por:</label>
+                        <select id="sortBy" onchange="sortVehicles()">
+                            <option value="relevance">Relevância</option>
+                            <option value="price-asc">Menor Preço</option>
+                            <option value="price-desc">Maior Preço</option>
+                            <option value="year-desc">Mais Novo</option>
+                            <option value="year-asc">Mais Antigo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cars-grid" id="carsGrid">
+                    <div class="car-card" data-brand="bmw" data-year="2023" data-price="269900" data-fuel="gasolina">
+                        <div class="car-badge">Destaque</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=250&fit=crop" alt="BMW Série 3">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>BMW Série 3 320i</h3>
+                            <p class="car-year">2023 | Gasolina | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 25.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-old">R$ 289.000</span>
+                                <span class="price-current">R$ 269.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="mercedes" data-year="2023" data-price="329900" data-fuel="gasolina">
+                        <div class="car-badge hot">Mais Vendido</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&h=250&fit=crop" alt="Mercedes C300">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Mercedes-Benz C300</h3>
+                            <p class="car-year">2023 | Gasolina | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 18.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 329.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="audi" data-year="2022" data-price="229900" data-fuel="gasolina">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop" alt="Audi A4">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Audi A4 Prestige</h3>
+                            <p class="car-year">2022 | Gasolina | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 32.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-old">R$ 245.000</span>
+                                <span class="price-current">R$ 229.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="porsche" data-year="2024" data-price="1299000" data-fuel="gasolina">
+                        <div class="car-badge new">Novo</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=250&fit=crop" alt="Porsche 911">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Porsche 911 Carrera</h3>
+                            <p class="car-year">2024 | Gasolina | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 0 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 1.299.000</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="landrover" data-year="2023" data-price="489900" data-fuel="hibrido">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=400&h=250&fit=crop" alt="Land Rover Range Rover">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Land Rover Range Rover</h3>
+                            <p class="car-year">2023 | Híbrido | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 12.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 489.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="bmw" data-year="2024" data-price="389900" data-fuel="hibrido">
+                        <div class="car-badge new">Novo</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1523983388277-336a66bf9bcd?w=400&h=250&fit=crop" alt="BMW X5">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>BMW X5 xDrive45e</h3>
+                            <p class="car-year">2024 | Híbrido | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 0 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 389.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="mercedes" data-year="2022" data-price="459900" data-fuel="gasolina">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=400&h=250&fit=crop" alt="Mercedes GLC">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Mercedes GLC 300</h3>
+                            <p class="car-year">2022 | Gasolina | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 25.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-old">R$ 499.000</span>
+                                <span class="price-current">R$ 459.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="audi" data-year="2023" data-price="279900" data-fuel="flex">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=400&h=250&fit=crop" alt="Audi Q5">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Audi Q5 Sportback</h3>
+                            <p class="car-year">2023 | Flex | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 15.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 279.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="volvo" data-year="2024" data-price="329900" data-fuel="hibrido">
+                        <div class="car-badge new">Novo</div>
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=400&h=250&fit=crop" alt="Volvo XC60">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Volvo XC60 Recharge</h3>
+                            <p class="car-year">2024 | Híbrido | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 0 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 329.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="jaguar" data-year="2023" data-price="359900" data-fuel="gasolina">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop" alt="Jaguar F-Pace">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Jaguar F-Pace R-Sport</h3>
+                            <p class="car-year">2023 | Gasolina | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 8.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 359.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="porsche" data-year="2022" data-price="699900" data-fuel="gasolina">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop" alt="Porsche Cayenne">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>Porsche Cayenne S</h3>
+                            <p class="car-year">2022 | Gasolina | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 28.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-old">R$ 749.000</span>
+                                <span class="price-current">R$ 699.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card" data-brand="bmw" data-year="2021" data-price="189900" data-fuel="flex">
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=400&h=250&fit=crop" alt="BMW X1">
+                            <div class="car-overlay">
+                                <a href="#" class="btn-view">Ver Detalhes</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h3>BMW X1 sDrive18i</h3>
+                            <p class="car-year">2021 | Flex | Automático</p>
+                            <div class="car-specs">
+                                <span><i class="fas fa-tachometer-alt"></i> 42.000 km</span>
+                                <span><i class="fas fa-cog"></i> Automático</span>
+                            </div>
+                            <div class="car-price">
+                                <span class="price-current">R$ 189.900</span>
+                            </div>
+                            <div class="car-actions">
+                                <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                                <button class="btn-favorite"><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 100 100" class="spiky-ball">
+                                <circle cx="50" cy="50" r="35" fill="#1a1a2e"/>
+                                <g class="spikes">
+                                    <polygon points="50,5 45,25 55,25" fill="#1a1a2e"/>
+                                    <polygon points="50,95 45,75 55,75" fill="#1a1a2e"/>
+                                    <polygon points="5,50 25,45 25,55" fill="#1a1a2e"/>
+                                    <polygon points="95,50 75,45 75,55" fill="#1a1a2e"/>
+                                </g>
+                                <circle cx="50" cy="50" r="28" fill="#0f3460"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">ANGER</span>
+                            <span class="logo-sub">imports</span>
+                        </div>
+                    </a>
+                    <p>Sua concessionária de carros importados com os melhores preços e condições do mercado.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="index.html#promocoes">Promoções</a></li>
+                        <li><a href="ajuda.html">Ajuda</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">Financiamento</a></li>
+                        <li><a href="registro-testdrive.html">Test Drive</a></li>
+                        <li><a href="#">Revisões</a></li>
+                        <li><a href="#">Garantia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@angerimports.com.br</p>
+                    <p><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 9h-14h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 A.N.G.E.R IMPORTS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>

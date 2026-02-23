@@ -1,0 +1,336 @@
+.catalog-page {
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.catalog-hero {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    padding: 60px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.catalog-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.catalog-hero h1 span {
+    color: #60a5fa;
+}
+
+.catalog-hero p {
+    opacity: 0.9;
+}
+
+.catalog-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+.filters-sidebar {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+
+.filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light);
+}
+
+.filters-header h3 {
+    font-size: 18px;
+    color: var(--dark);
+}
+
+.filters-header h3 i {
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+.btn-clear-filters {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-clear-filters:hover {
+    text-decoration: underline;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group > label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--light);
+    transition: var(--transition);
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.range-inputs select {
+    flex: 1;
+}
+
+.range-inputs span {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.checkbox-label input:checked + .checkmark {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.checkbox-label input:checked + .checkmark::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10px;
+}
+
+.btn-apply-filters {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--primary), var(--royal-blue));
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-apply-filters:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.catalog-content {
+    min-height: 500px;
+}
+
+.catalog-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-toggle-filters {
+    display: none;
+    padding: 10px 20px;
+    background: var(--white);
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-toggle-filters i {
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+.results-info {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-options label {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.sort-options select {
+    padding: 10px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--white);
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.car-specs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.car-specs span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e5e7eb;
+    background: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.page-btn:hover,
+.page-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.page-btn.next {
+    width: auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .catalog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100vh;
+        z-index: 1001;
+        border-radius: 0;
+        max-height: 100vh;
+        transition: var(--transition);
+    }
+
+    .filters-sidebar.active {
+        left: 0;
+    }
+
+    .btn-toggle-filters {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .catalog-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sort-options {
+        justify-content: space-between;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+}
