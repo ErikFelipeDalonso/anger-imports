@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo A.N.G.E.R IMPORTS - 4K</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a2e;
+            color: white;
+            min-height: 100vh;
+            padding: 40px;
+        }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        .logo-card {
+            background: #0f3460;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+        .logo-card h2 { margin-bottom: 20px; font-size: 18px; }
+        .logo-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .logo-card.with-bg img { background: linear-gradient(135deg, #0a1f3a, #0f3460, #1e40af); }
+        .logo-card.without-bg img { background: transparent; }
+        button {
+            background: #1e40af;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: scale(1.05); }
+        .info {
+            text-align: center;
+            margin-top: 40px;
+            color: #60a5fa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo A.N.G.E.R IMPORTS - Download 4K</h1>
+    
+    <div class="container">
+        <div class="logo-card with-bg">
+            <h2>Logo Completa (com fundo)</h2>
+            <img id="logo4k" src="img/logo-4k.svg" alt="Logo 4K">
+            <br>
+            <button onclick="downloadSVG('logo-4k.svg', 'anger-imports-logo-4k.svg')">Baixar SVG</button>
+            <button onclick="downloadPNG('logo4k', 3840, 2160, 'anger-imports-logo-4k.png')">Baixar PNG 4K</button>
+        </div>
+        
+        <div class="logo-card without-bg">
+            <h2>Apenas Ícone (fundo transparente)</h2>
+            <img id="logoAlone" src="img/logo-alone.svg" alt="Logo Ícone">
+            <br>
+            <button onclick="downloadSVG('img/logo-alone.svg', 'anger-imports-icon.svg')">Baixar SVG</button>
+            <button onclick="downloadPNG('logoAlone', 2000, 2000, 'anger-imports-icon-4k.png')">Baixar PNG 4K</button>
+        </div>
+    </div>
+    
+    <div class="info">
+        <p>Resolução: 3840 x 2160 pixels (4K Ultra HD)</p>
+        <p>Formato: SVG (vetorial) e PNG</p>
+    </div>
+
+    <script>
+        function downloadSVG(path, filename) {
+            const a = document.createElement('a');
+            a.href = path;
+            a.download = filename;
+            a.click();
+        }
+
+        function downloadPNG(imgId, width, height, filename) {
+            const img = document.getElementById(imgId);
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            
+            ctx.drawImage(img, 0, 0, width, height);
+            
+            const a = document.createElement('a');
+            a.href = canvas.toDataURL('image/png');
+            a.download = filename;
+            a.click();
+        }
+    </script>
+</body>
+</html>
